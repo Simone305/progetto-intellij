@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "4302d214-5736-4000-8511-37e095dde6f9",
+		"name": "busticket",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48386725",
+		"_collection_link": "https://simobilly99-2817884.postman.co/workspace/Simo's-Workspace~c27b8a84-dcd1-4de0-805b-3a3877e5520a/collection/48386725-4302d214-5736-4000-8511-37e095dde6f9?action=share&source=collection_link&creator=48386725"
+	},
+	"item": [
+		{
+			"name": "registrazione",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"nuovoutente@example.com\",\r\n    \"password\": \"Password123!\",\r\n    \"credit\": 30\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "trip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "origin",
+							"value": "Messina",
+							"type": "text"
+						},
+						{
+							"key": "destination",
+							"value": "Catania",
+							"type": "text"
+						},
+						{
+							"key": "departureTime",
+							"value": "2025-09-08T15:30:00",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "50",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/trips",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trips"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"nuovoutente@example.com\",\r\n    \"password\": \"Password123!\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
